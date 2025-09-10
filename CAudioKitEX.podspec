@@ -21,5 +21,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Sources/CAudioKitEX/**/*}'
   s.public_header_files = 'Sources/CAudioKitEX/**/*.h'
-  s.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
+  s.header_mappings_dir = 'Sources/CAudioKitEX'
+  s.pod_target_xcconfig = {
+    'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14',
+    'HEADER_SEARCH_PATHS' => '"$(PODS_TARGET_SRCROOT)/Sources/CAudioKitEX"'
+  }
 end

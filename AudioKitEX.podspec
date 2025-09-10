@@ -21,23 +21,13 @@ Pod::Spec.new do |s|
 
   s.default_subspecs = ['Core']
 
-  # Subtarget (CAudioKitEX)
-  s.subspec 'CAudioKitEX' do |ss|
-    ss.source_files = 'Sources/CAudioKitEX/**/*.}'
-    ss.public_header_files = 'Sources/CAudioKitEX/**/*.h'
-    ss.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
-  end
+  s.source_files = 'Sources/AudioKitEX/**/*'
+  s.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
 
-  s.subspec 'Core' do |ss|
-    # Source files
-    ss.source_files = 'Sources/AudioKitEX/**/*'
-    ss.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
+  # Resources
+  s.resources = ['Sources/AudioKitEX/Resources/**/*']
   
-    # Resources
-    ss.resources = ['Sources/AudioKitEX/Resources/**/*']
-    
-    # Dependencies
-    ss.dependency 'AudioKit'
-    ss.dependency 'AudioKitEX/CAudioKitEX'
-  end
+  # Dependencies
+  s.dependency 'AudioKit'
+  s.dependency 'CAudioKitEX'
 end

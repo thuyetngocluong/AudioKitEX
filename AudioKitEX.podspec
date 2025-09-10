@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   # Swift version
   s.swift_version = '5.5'
 
-  s.default_specs = ['Core']
+  s.default_subspecs = ['Core']
 
   # Subtarget (CAudioKitEX)
   s.subspec 'CAudioKitEX' do |ss|

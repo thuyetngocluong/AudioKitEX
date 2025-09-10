@@ -38,6 +38,6 @@ Pod::Spec.new do |s|
     
     # Dependencies
     ss.dependency 'AudioKit'
-    ss.dependency 'CAudioKitEX'
+    ss.dependency 'AudioKitEX/CAudioKitEX'
   end
 end

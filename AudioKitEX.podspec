@@ -22,10 +22,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/AudioKitEX/**/*'
   s.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
 
-  # Resources
-  s.resources = ['Sources/AudioKitEX/Resources/**/*']
-  
-  # Dependencies
   s.dependency 'AudioKit'
   s.dependency 'CAudioKitEX'
 end

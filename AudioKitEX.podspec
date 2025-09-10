@@ -19,6 +19,8 @@ Pod::Spec.new do |s|
   # Swift version
   s.swift_version = '5.5'
 
+  s.default_specs = ['Core']
+
   # Subtarget (CAudioKitEX)
   s.subspec 'CAudioKitEX' do |ss|
     ss.source_files = 'Sources/CAudioKitEX/**/*.}'
@@ -26,7 +28,7 @@ Pod::Spec.new do |s|
     ss.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
   end
 
-  s.subspec 'AudioKitEX' do |ss|
+  s.subspec 'Core' do |ss|
     # Source files
     ss.source_files = 'Sources/AudioKitEX/**/*'
     ss.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
